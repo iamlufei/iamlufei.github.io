@@ -1,0 +1,104 @@
+/* __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#v3d-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen-open {
+    background-image: url('media/fullscreen-open.png');
+}
+
+.fullscreen-close {
+    background-image: url('media/fullscreen-close.png');
+}
+
+/* removes tap blinking on ios devices */
+* { -webkit-tap-highlight-color:rgba(0,0,0,0); }
+
+
+#btns {
+    background-size: 100% 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .btn {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity .3s linear;
+  }
+
+  @media screen and (max-width: 812px) {
+    .btn {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 3px;
+    }
+  }
+
+  .btntrans {
+    opacity: .7;
+  }
+  
+  .music-on-button {
+    background-image: url('media/music-on.png');
+  }
+  
+  .music-off-button {
+    background-image: url('media/music-off.png');
+  }
+  
+  #upload_button {
+    background-image: url('media/upload.png');
+  }
+  
+  #screen_shot_button {
+    background-image: url('media/screen-shot.png');
+  }
+  
+  #vr_button {
+    background-image: url('media/vr.png');
+  }
+
+  #gyro_button {
+    background-image: url('media/gyro.png');
+
+  }
+  
+  .v3d-simple-preloader-logo {
+    background-image: url("icon.png");
+    background-size: 100%;
+    background-position: center;
+  }
+  
+  .v3d-simple-preloader-bar {
+    background: rgb(91, 170, 216);
+    border: 1px solid rgb(131, 201, 241);
+  }

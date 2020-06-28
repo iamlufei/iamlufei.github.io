@@ -1,0 +1,962 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="993.0000000000005" scrolly="867" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="{{Z1m22)0S5J-eA:-K/-" x="-1010" y="-870">
+      <field name="LOAD_COMP_ASSETS">FALSE</field>
+      <field name="FULLSCREEN">TRUE</field>
+      <field name="BKG_TRANSPARENCY">FALSE</field>
+      <field name="PRESERVE_DRAW_BUF">TRUE</field>
+      <field name="FADE_ANNOTATIONS">TRUE</field>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="true" scrollx="67.99999999999977" scrolly="96.99999999999994" scale="1">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="KkIGLzVXGJQX%Q9DDj~%" type="">info</variable>
+      <variable id="#or(CO3rzxc+3j)r[Qj^" type="">video_url</variable>
+      <variable id="(:DI;G#k?$2R`ZjG?E=)" type="">image_url</variable>
+      <variable id="r/{e*F}PBXa8WpMtwyH(" type="">video_element</variable>
+      <variable id="Y$HFsS{`2A-iuo0{++J," type="">gyro</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="hide" id="uXBU;aO8#rcVe1}DP~lL" x="10" y="10">
+      <value name="VALUE">
+        <block type="objectList" id="amv$x^#~,9yo4Y0V~fYm">
+          <field name="FIELDNAME">Sphere</field>
+        </block>
+      </value>
+      <next>
+        <block type="addHTMLElement" id="@-z5[7$zg|c4rGAJ!UB#">
+          <field name="ELEMENT">div</field>
+          <field name="MODE">TO</field>
+          <field name="PARENT">FALSE</field>
+          <value name="ID">
+            <block type="text" id="(XaAXplQ0e-vumk4s|$K">
+              <field name="TEXT">alert</field>
+            </block>
+          </value>
+          <value name="TARGET_ID">
+            <shadow type="DOMObjectSelector" id="3U_IVKu/bQJ0+$mYq89(">
+              <field name="DOM_OBJECT">CONTAINER</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="setHTMLElemAttribute" id="LpmD`U7,7#RxPXy81+KY" inline="false" collapsed="true">
+              <field name="ATTRIBUTE">style</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text_join" id="%3d9I=6HgEgKETHBuyaN">
+                  <mutation items="11"/>
+                  <value name="ADD0">
+                    <block type="text" id="MY+gAm[$lgp2`R$PoF`O">
+                      <field name="TEXT">position: absolute;</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text" id="zBt~:|;.AcNbBH|rQBY*">
+                      <field name="TEXT">padding: 20px;</field>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="text" id="KDRjYDojmcH,3()):#{l">
+                      <field name="TEXT">background-color: black;</field>
+                    </block>
+                  </value>
+                  <value name="ADD3">
+                    <block type="text" id=":#1AR@6koPclPsmQ/RHm">
+                      <field name="TEXT">color: white;</field>
+                    </block>
+                  </value>
+                  <value name="ADD4">
+                    <block type="text" id="m*qLL_EoDZy#vavcudm}">
+                      <field name="TEXT">left: 0px;</field>
+                    </block>
+                  </value>
+                  <value name="ADD5">
+                    <block type="text" id="|E-a%`opx2EX1c]-tn][">
+                      <field name="TEXT">right: 0px;</field>
+                    </block>
+                  </value>
+                  <value name="ADD6">
+                    <block type="text" id="(h/(U2In=s-WX35,1-vG">
+                      <field name="TEXT">bottom: 0px;</field>
+                    </block>
+                  </value>
+                  <value name="ADD7">
+                    <block type="text" id="8PUZPM2gw])((W3nh6pP">
+                      <field name="TEXT">font-family: sans-serif;</field>
+                    </block>
+                  </value>
+                  <value name="ADD8">
+                    <block type="text" id="6Zp~_,k*,,2iw5f+1{yH">
+                      <field name="TEXT">text-align: center;</field>
+                    </block>
+                  </value>
+                  <value name="ADD9">
+                    <block type="text" id="vKq0c{p!LgSV}GmBMxp?">
+                      <field name="TEXT">user-select:none;</field>
+                    </block>
+                  </value>
+                  <value name="ADD10">
+                    <block type="text" id="l~!M%Zf^a`rP9_F_ze$h">
+                      <field name="TEXT">display:none;</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="ID">
+                <block type="text" id="#ySi3A4/88|F*u_~1eQ1">
+                  <field name="TEXT">alert</field>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" id="VV!*~MbmxcC}hb(dT7tW">
+                  <value name="IF0">
+                    <block type="featureAvailable" id="TXCZw}n+A[uZsWZK4]n/">
+                      <field name="FEATURE">MOBILE</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="setScreenScale" id="x,8|{[WSeFi_]]^E1X(Y">
+                      <value name="FACTOR">
+                        <shadow type="math_number" id="WoFRP]#Sdc[Bsg7O/w.Z">
+                          <field name="NUM">2</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="variables_set" id="}A6p$HO0tJ5R|!$[dZ;}">
+                      <field name="VAR" id="#or(CO3rzxc+3j)r[Qj^">video_url</field>
+                      <value name="VALUE">
+                        <block type="dictGet" id="|=#,VsD{S`d7J3Fr[WdO">
+                          <value name="DICT">
+                            <block type="getUrlData" id="}R7s}P|lWjA#|_kj%XHr">
+                              <field name="KIND">PARAMS</field>
+                              <field name="PARENT">FALSE</field>
+                            </block>
+                          </value>
+                          <value name="KEY">
+                            <shadow type="text" id="M8LpJpV_,V-I/^(;pRoq">
+                              <field name="TEXT">video</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" id="wT/YebB:L*8yKSg331Oc">
+                          <field name="VAR" id="(:DI;G#k?$2R`ZjG?E=)">image_url</field>
+                          <value name="VALUE">
+                            <block type="dictGet" id="s]L(l?KL9ouq!$s/:W4,">
+                              <value name="DICT">
+                                <block type="getUrlData" id="c=lvTwR$k%taoZ@%{[kL">
+                                  <field name="KIND">PARAMS</field>
+                                  <field name="PARENT">FALSE</field>
+                                </block>
+                              </value>
+                              <value name="KEY">
+                                <shadow type="text" id="ilr[mzUyLzQ0]l;Ff-Ev">
+                                  <field name="TEXT">image</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_if" id="{zM{j1P_bu5HG5I|SJ8b">
+                              <mutation elseif="1"/>
+                              <comment pinned="false" h="80" w="160">从地址参数加载视频或图片</comment>
+                              <value name="IF0">
+                                <block type="variables_get" id="zW{[ez{9Vz)=vOglW1$y">
+                                  <field name="VAR" id="#or(CO3rzxc+3j)r[Qj^">video_url</field>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="variables_set" id="@3VmUblR(0e?YV0.?1fW">
+                                  <field name="VAR" id="r/{e*F}PBXa8WpMtwyH(">video_element</field>
+                                  <value name="VALUE">
+                                    <block type="loadVideo" id="SlSoT`EM{U0Yb/?=6=ou">
+                                      <value name="URL">
+                                        <shadow type="text" id="0F)8u:`:4g5n}.jw+Fw6">
+                                          <field name="TEXT">./myVideo.mp4</field>
+                                        </shadow>
+                                        <block type="variables_get" id="7sg1KYmiCSVrqBay;i9,">
+                                          <field name="VAR" id="#or(CO3rzxc+3j)r[Qj^">video_url</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="replaceTexture" id="SlJlLEIjY9AEgW7Ks_/X">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" enabledoslot="true" flextexinput="false"></mutation>
+                                      <field name="OLD_TEX_NAME">env</field>
+                                      <value name="MATERIAL">
+                                        <block type="materialList" id="h`ti~/Nyi7|GX.YLMoh9">
+                                          <field name="FIELDNAME">env</field>
+                                        </block>
+                                      </value>
+                                      <value name="NEW_TEX_URL">
+                                        <shadow type="text" id="$^#z[;W)ykRkPG[^zB~)">
+                                          <field name="TEXT"/>
+                                        </shadow>
+                                        <block type="variables_get" id="AQbLi:p4!`eb9u]3j+=i">
+                                          <field name="VAR" id="r/{e*F}PBXa8WpMtwyH(">video_element</field>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="show" id="ra:o4E4SZS@}7=%Jy.%j">
+                                          <value name="VALUE">
+                                            <block type="objectList" id="NMJ6YciCpno}o0th`%}o">
+                                              <field name="FIELDNAME">Sphere</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <value name="IF1">
+                                <block type="variables_get" id="V.1m1~$9ZUH9x:j+5W-4">
+                                  <field name="VAR" id="(:DI;G#k?$2R`ZjG?E=)">image_url</field>
+                                </block>
+                              </value>
+                              <statement name="DO1">
+                                <block type="replaceTexture" id="MKHU3%w0Ok/+Ydc-Coa1">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" enabledoslot="true" flextexinput="false"></mutation>
+                                  <field name="OLD_TEX_NAME">env</field>
+                                  <value name="MATERIAL">
+                                    <block type="materialList" id="1-5Q9;Y.Q/UZlX!+7mJ*">
+                                      <field name="FIELDNAME">Verge3D_Environment_World</field>
+                                    </block>
+                                  </value>
+                                  <value name="NEW_TEX_URL">
+                                    <shadow type="text" id="%6R5F;zakiCPQ/G^y}=!">
+                                      <field name="TEXT"/>
+                                    </shadow>
+                                    <block type="variables_get" id="oPl{Cf`Z]|}~bHkX94?@">
+                                      <field name="VAR" id="(:DI;G#k?$2R`ZjG?E=)">image_url</field>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="hide" id="C3oVT+w1wX@.E1~6fL^.">
+                                      <value name="VALUE">
+                                        <block type="objectList" id="OBh/0uaQs;^+)2WRQPu0">
+                                          <field name="FIELDNAME">Sphere</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="whenClicked" id="=us:h7y?X!yI0:7rO4~u">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" enableifmissed="false"></mutation>
+                                  <comment pinned="false" h="80" w="160">点击空白处播放视频</comment>
+                                  <value name="VALUE">
+                                    <block type="objectList" id=";{i75v]xlHUNe#@-@1u6">
+                                      <field name="FIELDNAME">Sphere</field>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="controls_if" id="+4JI4M*[`sLm@q.i)i(A">
+                                      <value name="IF0">
+                                        <block type="variables_get" id="3X*as^CK4TZy_mLCbIes">
+                                          <field name="VAR" id="r/{e*F}PBXa8WpMtwyH(">video_element</field>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="controls_if" id="}ZunvCyenj?T@/LekCCz">
+                                          <value name="IF0">
+                                            <block type="logic_negate" id="2eswFKX28df+ka^(6aas">
+                                              <value name="BOOL">
+                                                <block type="isSoundPlaying" id="Gb%#D[hVBg3-`bk$OFQ+">
+                                                  <value name="VALUE">
+                                                    <block type="variables_get" id="c;XWNu,Ro@VO+l;3-b=8">
+                                                      <field name="VAR" id="r/{e*F}PBXa8WpMtwyH(">video_element</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="playSound" id="#m{6Yeq?tt4O0ez[cbM%">
+                                              <field name="LOOP">FALSE</field>
+                                              <value name="VALUE">
+                                                <block type="variables_get" id="lS}8k^a6-rr?SL2$G,ty">
+                                                  <field name="VAR" id="r/{e*F}PBXa8WpMtwyH(">video_element</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="eventHTMLElem" id="SpvC;wH%Xey~M{bqE6rM">
+                                      <field name="EVENT">click</field>
+                                      <field name="PARENT">FALSE</field>
+                                      <comment pinned="false" h="80" w="160">上传图片</comment>
+                                      <value name="ID">
+                                        <block type="text" id=",(yIfwqj+;bo{L]Jt_X0">
+                                          <field name="TEXT">upload_button</field>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="controls_if" id="5do@Q:?O[Kj2UH|7dCN$">
+                                          <comment pinned="false" h="80" w="160">从地址参数加载视频或图片</comment>
+                                          <value name="IF0">
+                                            <block type="variables_get" id="^@iCIx}[(/k??N@QIre8">
+                                              <field name="VAR" id="#or(CO3rzxc+3j)r[Qj^">video_url</field>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="stopSound" id="XyKSJ_c_WK/x6LP4XBp_">
+                                              <value name="VALUE">
+                                                <block type="loadVideo" id="Vk`,v(4.BmazyTJqXIH0">
+                                                  <value name="URL">
+                                                    <shadow type="text">
+                                                      <field name="TEXT">./myVideo.mp4</field>
+                                                    </shadow>
+                                                    <block type="variables_get" id="fGiW{;UG$|]7?C}ulE,3">
+                                                      <field name="VAR" id="#or(CO3rzxc+3j)r[Qj^">video_url</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="openFile" id="/Ok!bb/gN9wfN`=?DRe}">
+                                              <statement name="DO">
+                                                <block type="replaceTexture" id="+Ia+JAx+PXz*L/M?#.)e">
+                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" enabledoslot="true" flextexinput="false"></mutation>
+                                                  <field name="OLD_TEX_NAME">env</field>
+                                                  <value name="MATERIAL">
+                                                    <block type="materialList" id="ezvMFXR#B_)kX8FIli!m">
+                                                      <field name="FIELDNAME">Verge3D_Environment_World</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="NEW_TEX_URL">
+                                                    <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="PTWNYo2ufQ;L~Rz.tTC)">
+                                                      <field name="TEXT"></field>
+                                                    </shadow>
+                                                    <block type="openedFile" id="7%K:[T~mq-ajj-|pMn+T"/>
+                                                  </value>
+                                                  <statement name="DO">
+                                                    <block type="hide" id="})reKlp:J%!*4V69Bd@S">
+                                                      <value name="VALUE">
+                                                        <block type="objectList" id="WeXw~1b@j^(~,HWWdnf@">
+                                                          <field name="FIELDNAME">Sphere</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </statement>
+                                                </block>
+                                              </statement>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="eventHTMLElem" id="#a8[QdNgb[mZf--^#Gup">
+                                          <field name="EVENT">click</field>
+                                          <field name="PARENT">FALSE</field>
+                                          <comment pinned="false" h="80" w="160">截屏</comment>
+                                          <value name="ID">
+                                            <block type="text" id="yk^PMHoB}FkAU0;t7vsH">
+                                              <field name="TEXT">screen_shot_button</field>
+                                            </block>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="downloadFile" id="-aAvsNzR3K;W18bxIP0)">
+                                              <value name="CONTENTS">
+                                                <shadow type="text" id="iPZDsaBE$SB!*6o!Z$fL">
+                                                  <field name="TEXT">data:,</field>
+                                                </shadow>
+                                                <block type="takeScreenshot" id="ZRh}.o~_z$p,0ZSR^Nf$">
+                                                  <field name="TYPE">jpeg</field>
+                                                </block>
+                                              </value>
+                                              <value name="FILENAME">
+                                                <shadow type="text" id="Dl@z(s@RDf_0RAk*yW}P">
+                                                  <field name="TEXT">screenshot.jpg</field>
+                                                </shadow>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="eventHTMLElem" id="`]?J_ib*qGMqcjM5wO#*">
+                                              <field name="EVENT">click</field>
+                                              <field name="PARENT">FALSE</field>
+                                              <comment pinned="false" h="80" w="160">陀螺仪</comment>
+                                              <value name="ID">
+                                                <block type="text" id="GP4+vH4Z$ueS6tWxi81i">
+                                                  <field name="TEXT">gyro_button</field>
+                                                </block>
+                                              </value>
+                                              <statement name="DO">
+                                                <block type="controls_if" id="MS~M)C*}}7GT?hz7*pI+">
+                                                  <mutation else="1"/>
+                                                  <value name="IF0">
+                                                    <block type="featureAvailable" id="am|d`Zr7ukL5TR.aluU%">
+                                                      <field name="FEATURE">MOBILE</field>
+                                                    </block>
+                                                  </value>
+                                                  <statement name="DO0">
+                                                    <block type="variables_set" id="tcwBqtvB8@`)y{IGMFl.">
+                                                      <field name="VAR" id="Y$HFsS{`2A-iuo0{++J,">gyro</field>
+                                                      <value name="VALUE">
+                                                        <block type="logic_negate" id="[kwvgL3l2gtf=:y$f~,T">
+                                                          <value name="BOOL">
+                                                            <block type="variables_get" id="/*].{umU$W0Z|}fk+XXb">
+                                                              <field name="VAR" id="Y$HFsS{`2A-iuo0{++J,">gyro</field>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="controls_ifelse" id="@{qrZ-iY%HAU1PsD9ZM5">
+                                                          <value name="IF0">
+                                                            <block type="variables_get" id="B`Mf{dm%Ovhn|/$TtB$?">
+                                                              <field name="VAR" id="Y$HFsS{`2A-iuo0{++J,">gyro</field>
+                                                            </block>
+                                                          </value>
+                                                          <statement name="DO0">
+                                                            <block type="callJSFunction" id="|2!$hPWK6Ts`.lT9Bs[H">
+                                                              <mutation xmlns="http://www.w3.org/1999/xhtml" name="enableGyro"></mutation>
+                                                              <field name="NAME">enableGyro</field>
+                                                            </block>
+                                                          </statement>
+                                                          <statement name="ELSE">
+                                                            <block type="callJSFunction" id="IAl,e8M89*-KAE(8MN.A">
+                                                              <mutation xmlns="http://www.w3.org/1999/xhtml" name="disableGyro"></mutation>
+                                                              <field name="NAME">disableGyro</field>
+                                                            </block>
+                                                          </statement>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </statement>
+                                                  <statement name="ELSE">
+                                                    <block type="procedures_callnoreturn" id="pZZA:q2XvNbWSXi51Nq6">
+                                                      <mutation name="alertInfo">
+                                                        <arg name="info"/>
+                                                      </mutation>
+                                                      <value name="ARG0">
+                                                        <block type="text" id="V(1iZR`@9L`T^TnNp8YS">
+                                                          <field name="TEXT">仅支持手机</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </statement>
+                                                </block>
+                                              </statement>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="#+#18e9Dq`;k_q]p70R)" x="10" y="1310">
+      <mutation>
+        <arg name="info" varid="KkIGLzVXGJQX%Q9DDj~%"/>
+      </mutation>
+      <field name="NAME">alertInfo</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="setHTMLElemAttribute" id=")y__*aszK{t;Jop4.ihD">
+          <field name="ATTRIBUTE">innerHTML</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="variables_get" id="wYT_1YONxF;Hw[.mA2vO">
+              <field name="VAR" id="KkIGLzVXGJQX%Q9DDj~%">info</field>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="text" id="pN4^W_wYaP1rSFFUr}Ar">
+              <field name="TEXT">alert</field>
+            </block>
+          </value>
+          <next>
+            <block type="setHTMLElemStyle" id="{J*xYX?q[HS0#4!Q-KE*">
+              <field name="PROPERTY">display</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text" id="LLy0rKb`(.)%aLx.1q/;">
+                  <field name="TEXT">block</field>
+                </block>
+              </value>
+              <value name="ID">
+                <block type="text" id="pUl?136|PT~8Nt51ngr^">
+                  <field name="TEXT">alert</field>
+                </block>
+              </value>
+              <next>
+                <block type="setTimeout" id="maFGQv9$jA*Ra[!_f0d2">
+                  <value name="VALUE">
+                    <shadow type="math_number" id="p{/?lTDEi9`$Sb3h4Ykp">
+                      <field name="NUM">2</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="setHTMLElemStyle" id="OMwO:-q`l?VrGmqNyZl6">
+                      <field name="PROPERTY">display</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="VALUE">
+                        <block type="text" id="vwCNcU.UW{Z`!^|:2V*j">
+                          <field name="TEXT">none</field>
+                        </block>
+                      </value>
+                      <value name="ID">
+                        <block type="text" id="j!V~[D6v6IMMI%~Dub#t">
+                          <field name="TEXT">alert</field>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <tab name="music" type="SecondaryTab" active="false" scrollx="-221.97442922592177" scrolly="197.9999999999999" scale="0.9">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="Em]VKW%C]fZ6I}p2ZMMj" type="">music_off</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="N!F)z;?Xn5dU*-h06hFS" x="330" y="10">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <block type="text" id=":i^Af*5kFoYTjU5K94b,">
+          <field name="TEXT">music_button</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="variables_set" id="4k=+]$J|eYM0rP}v)d!C">
+          <field name="VAR" id="Em]VKW%C]fZ6I}p2ZMMj">music_off</field>
+          <value name="VALUE">
+            <block type="logic_negate" id="b+u1zO4Z0zTzGxYE!Y/#">
+              <value name="BOOL">
+                <block type="variables_get" id="t%vUu~;om|?_!6.-vjvT">
+                  <field name="VAR" id="Em]VKW%C]fZ6I}p2ZMMj">music_off</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="controls_ifelse" id="mQJWjWjrLyn6qXhZ8D8^">
+              <value name="IF0">
+                <block type="variables_get" id="|IyA:0$LAl]W.B~a.H{8">
+                  <field name="VAR" id="Em]VKW%C]fZ6I}p2ZMMj">music_off</field>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="setHTMLElemAttribute" id="9vL8]m}APn)W*i#Rs|K5">
+                  <field name="ATTRIBUTE">className</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="VALUE">
+                    <block type="text" id="X`j|/N/U6h;)/l9Ri]P~">
+                      <field name="TEXT">btn music-on-button</field>
+                    </block>
+                  </value>
+                  <value name="ID">
+                    <block type="text" id="BF:6h@woj/fc!Fv)5+kE">
+                      <field name="TEXT">music_button</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="playSound" id="-:_/I2zRA3Lt7f~%m7h2">
+                      <field name="LOOP">TRUE</field>
+                      <value name="VALUE">
+                        <block type="loadSoundAdv" id="sNECoswmt36@X6V?zW}t">
+                          <value name="URL">
+                            <shadow type="text" id="w)Oh*Iu8C!SL{CboL`hC">
+                              <field name="TEXT">./bjyy.mp3</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="setHTMLElemAttribute" id="O`5g!zSp1h)RPgQr^CY%">
+                  <field name="ATTRIBUTE">className</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="VALUE">
+                    <block type="text" id="j!#pc@}@2+]:h,cME:2g">
+                      <field name="TEXT">btn music-off-button</field>
+                    </block>
+                  </value>
+                  <value name="ID">
+                    <block type="text" id="k^9ty6!.IzbGPBH6BF#4">
+                      <field name="TEXT">music_button</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="pauseSound" id="Dv=:GoU!4+s{@VXsmsI$">
+                      <value name="VALUE">
+                        <block type="loadSoundAdv" id="[*2cMOZl*)B,a9yo.={6">
+                          <value name="URL">
+                            <shadow type="text" id="r7X%=a,jomeG,WWatCrp">
+                              <field name="TEXT">./bjyy.mp3</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <tab name="vr" type="SecondaryTab" active="false" scrollx="-502" scrolly="151.99999999999943" scale="0.9">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="X)PNukQQyQogR_=,uu;v" type="">vrAvailable</variable>
+      <variable id="KkIGLzVXGJQX%Q9DDj~%" type="">info</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="hide" id="Ee+D(O?[:}Uc)XE0bXap" x="660" y="-99">
+      <value name="VALUE">
+        <block type="objectList" id="g*ye-9uGBPj@8`sQi6@g">
+          <field name="FIELDNAME">exitvr</field>
+        </block>
+      </value>
+      <next>
+        <block type="checkVRMode" id="!g_A+|D2.t|ti@Zcayk(">
+          <statement name="DO_AVAIL">
+            <block type="variables_set" id="xOFFT}qK~O##X=HVJyvA">
+              <field name="VAR" id="X)PNukQQyQogR_=,uu;v">vrAvailable</field>
+              <value name="VALUE">
+                <block type="logic_boolean" id="xs3mShv^~({Gu3L65q~(">
+                  <field name="BOOL">TRUE</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <statement name="DO_UNAVAIL">
+            <block type="variables_set" id="q`if]3xLLv?^7I{S[Q[g">
+              <field name="VAR" id="X)PNukQQyQogR_=,uu;v">vrAvailable</field>
+              <value name="VALUE">
+                <block type="logic_boolean" id="`L=#~pOX[:EWLRA=jIv?">
+                  <field name="BOOL">FALSE</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="eventHTMLElem" id="6S}Aq$lz84_hj4g[IL*z">
+              <field name="EVENT">click</field>
+              <field name="PARENT">FALSE</field>
+              <value name="ID">
+                <block type="text" id="}rC-%k|#.Bt8UIMrR]ak">
+                  <field name="TEXT">vr_button</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" id="}nJI@eZvO*qnu@ardYK[">
+                  <mutation else="1"/>
+                  <value name="IF0">
+                    <block type="variables_get" id="Mjb2GEX|7gc68N?g!|JO">
+                      <field name="VAR" id="X)PNukQQyQogR_=,uu;v">vrAvailable</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="enterVRMode" id="O|I6Jw{Obh,V$5!~:6[0">
+                      <field name="REF_SPACE">ORIGIN</field>
+                      <statement name="DO_ENTER">
+                        <block type="snapToObject" id="+uKkzjQ(#lnB[).m$=jU">
+                          <value name="SNAPWHAT">
+                            <block type="objectList" id=".{:iwzwI5!WJ5EtMnQm9">
+                              <field name="FIELDNAME">Camera</field>
+                            </block>
+                          </value>
+                          <value name="SNAPTO">
+                            <block type="objectList" id="EysLaToLvow3tU:J#jaJ">
+                              <field name="FIELDNAME">VRCameraLocater</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="replaceTexture" id="14n8WceKrws;k@3(:1}|">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" enabledoslot="false" flextexinput="false"></mutation>
+                              <field name="OLD_TEX_NAME">exitvr</field>
+                              <value name="MATERIAL">
+                                <block type="materialList" id="|=|)*06)=Z`5U]qdN5S!">
+                                  <field name="FIELDNAME">exitvr</field>
+                                </block>
+                              </value>
+                              <value name="NEW_TEX_URL">
+                                <shadow type="text" id="idXc#to1)r2-A!eaJuLp">
+                                  <field name="TEXT">./newTexture.png</field>
+                                </shadow>
+                                <block type="textureFromText" id="82Nj:ELFR*Dm4g(Q{8i{">
+                                  <field name="ALIGN">FIT</field>
+                                  <value name="TEXT">
+                                    <shadow type="text" id="{m2M!]j5Db5%]#==^kNj">
+                                      <field name="TEXT">退出VR</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="WIDTH">
+                                    <shadow type="math_number" id="!.~@Bh{M|)-E(s9T}6EK">
+                                      <field name="NUM">1024</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="HEIGHT">
+                                    <shadow type="math_number" id="sw{M}?Y/e7V$Q1o0Jh,+">
+                                      <field name="NUM">512</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="FONTFAMILY">
+                                    <shadow type="text" id="u#2^9yYB/6VcVCD)r(!C">
+                                      <field name="TEXT">Arial</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="FONTSIZE">
+                                    <shadow type="math_number" id=")o6IRh]wWIxp`]$E^*;C">
+                                      <field name="NUM">160</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="OFFSET">
+                                    <shadow type="math_number" id="jO/*4$/jJ6Wi_RTWL/OV">
+                                      <field name="NUM">50</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="everyFrame" id="UBN`_wE.z8~|GIsrZ~kW">
+                                  <statement name="DO">
+                                    <block type="controls_if" id="W{Uq.CK;nG%l;y[ELU?O">
+                                      <mutation else="1"/>
+                                      <comment pinned="false" h="80" w="160">当相机朝下时显示退出按钮</comment>
+                                      <value name="IF0">
+                                        <block type="logic_compare" id="~+YW{|zETHR~%/YMO_A0">
+                                          <field name="OP">GT</field>
+                                          <value name="A">
+                                            <block type="convertToNumber" id="GyYK6s,2%B*v2]mb6|i$">
+                                              <value name="VALUE">
+                                                <block type="vectorMath" id="OFg!x4bY+gm$k7s`Kd/v">
+                                                  <field name="VALUE_NAME">DOT</field>
+                                                  <value name="VECTOR">
+                                                    <block type="getObjDirection" id="kJYW5$RFU)zHq*23bprN">
+                                                      <field name="COORD">XYZ</field>
+                                                      <value name="TARGETOBJ">
+                                                        <block type="objectList" id="E8yf_QXis.B1~,f3b,Fx">
+                                                          <field name="FIELDNAME">Camera</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                  <value name="VECTOR2">
+                                                    <block type="createVector" id="W$G|4jmXD*8;,{5/R({c">
+                                                      <value name="X">
+                                                        <shadow type="math_number" id="ZfY7;#)!~i5OJYXXGRyg">
+                                                          <field name="NUM">0</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="Y">
+                                                        <shadow type="math_number" id="wb/-xsI;])2QvXNC+v=a">
+                                                          <field name="NUM">0</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="Z">
+                                                        <shadow type="math_number" id="KEy=N/fIz1T$b~z_R,T*">
+                                                          <field name="NUM">-1</field>
+                                                        </shadow>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number" id="](~`dLHK:q7OHE$y=KRc">
+                                              <field name="NUM">0.7</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="show" id="AIpPaQnaxb8/}`+}8M~G">
+                                          <value name="VALUE">
+                                            <block type="objectList" id="rlLI*SGaynESk,@+(2Y#">
+                                              <field name="FIELDNAME">exitvr</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                      <statement name="ELSE">
+                                        <block type="hide" id="P?O]|X#SS01DkU`:`{f{">
+                                          <value name="VALUE">
+                                            <block type="objectList" id="qF}nk0R^A[$;7qF3,*i^">
+                                              <field name="FIELDNAME">exitvr</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="procedures_callnoreturn" id="6IUb/7E=oHo}1FSF#Fmz">
+                      <mutation name="alertInfo">
+                        <arg name="info"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="text" id="C4=_{hY)W6{Oc.0/1:tQ">
+                          <field name="TEXT">设备不支持VR</field>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+              <next>
+                <block type="whenClicked" id=";r|dY-Q2z5WA;yu67JS4">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" enableifmissed="false"></mutation>
+                  <comment pinned="false" h="80" w="160">退出VR会话</comment>
+                  <value name="VALUE">
+                    <block type="objectList" id="7M1l]vl_lZu_^=bk25,E">
+                      <field name="FIELDNAME">exitvr</field>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="hide" id="+jrH=:F2Cg=3RT]Kw~1C">
+                      <value name="VALUE">
+                        <block type="objectList" id="#+3^|iuw6|Rirozoa;Sv">
+                          <field name="FIELDNAME">exitvr</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="endVRMode" id="4O%Ql;4h4h#cx[5jO~U1"/>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <tab name="btn" type="SecondaryTab" active="false" scrollx="-164.9999999999999" scrolly="52.99999999999994" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="piYIFt|6^q.DKC.(Wuqu" x="290" y="230">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <comment pinned="false" h="80" w="160">按钮交互</comment>
+      <value name="ID">
+        <block type="text" id="t8[PwhfqP0q[P9t)WiDC">
+          <field name="TEXT">btns</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="setHTMLElemAttribute" id="!,SJ.a;!CCjfLt@GhRan">
+          <field name="ATTRIBUTE">className</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text_join" id="Z(|tFKWrEG-J=#7m)~!U">
+              <mutation items="2"/>
+              <value name="ADD0">
+                <block type="getHTMLElemAttribute" id="%*i!Fl)^Z!qKv$5..J0|">
+                  <field name="ATTRIBUTE">className</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="ID">
+                    <block type="getEventProperty" id="$Im.dZUhmLxe]w3UtNv%">
+                      <field name="PROPERTY">target.id</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="ADD1">
+                <block type="text" id="[[(+-Y]RiC)ocP@?YsT+">
+                  <field name="TEXT"> btntrans</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="getEventProperty" id="rxLc/s-ff2_6RL$6ar=U">
+              <field name="PROPERTY">target.id</field>
+            </block>
+          </value>
+          <next>
+            <block type="setTimeout" id="Et%-n8C92FU,,lw9t.S9">
+              <value name="VALUE">
+                <shadow type="math_number" id="~Y5/OZb-ckxwz8OZKw*G">
+                  <field name="NUM">0.3</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="setHTMLElemAttribute" id="Lp;{!n[}CNnRvs_sk`;{">
+                  <field name="ATTRIBUTE">className</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="VALUE">
+                    <block type="text_replace" id="Y7f$8qwsy#Ez,}[+XPZ0">
+                      <value name="FROM">
+                        <block type="text" id="OI=*,hRgRPVaK:8wt.J+">
+                          <field name="TEXT"> btntrans</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="text" id="cmNXke%XU_QpIoY!JhN,">
+                          <field name="TEXT"/>
+                        </block>
+                      </value>
+                      <value name="TEXT">
+                        <block type="getHTMLElemAttribute" id="K6pCkgppk(-u,!fJ;L,V">
+                          <field name="ATTRIBUTE">className</field>
+                          <field name="PARENT">FALSE</field>
+                          <value name="ID">
+                            <block type="getEventProperty" id="9pPRqXxCws.ILB5Vbb#r">
+                              <field name="PROPERTY">target.id</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="ID">
+                    <block type="getEventProperty" id="@Rw,(*R38=e$s_80/#XB">
+                      <field name="PROPERTY">target.id</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="28" viewport-w="768" viewport-h="484.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
